@@ -11,7 +11,7 @@
 #pragma newdecls required
 
 //Defines
-#define VERSION "1.00"
+#define VERSION "1.01"
 #define CHECK_DELAY 30.0
 #define SQL_SB_QUERY_SIZE 16384
 
@@ -237,8 +237,8 @@ public void SQL_GetLinkedInformation(Handle owner, Handle hndl, const char[] err
   Format(query, sizeof(query), "%s%s", query, ")");
   
   //Delete array lists
-  delete steamid64list = new ArrayList();
-  delete iplist = new ArrayList();
+  delete steamid64list;
+  delete iplist;
   
   //Query is now done, query the database
   SQL_TQuery(hSBDatabase, SQL_GetSBBanInformation, query, client);
